@@ -221,3 +221,7 @@ end
 return most_points[:player_name]
 end
 
+def winning_team
+  game_data=game_hash
+  points_team1=game_data[:home][:team_name]
+  points_team2=
