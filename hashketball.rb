@@ -266,5 +266,12 @@ def long_name_steals_a_ton?
     stealing_most=player
   end
   }
+   stealing_most=game_data[:away][:players][0]
+  game_data[:away][:players].each{|player|
+  if stealing_most[:steals]<=player[:steals]
+    stealing_most=player
+  end
+  }
+  return stealing_most[:player_name]==longest_name
   
-  
+end
