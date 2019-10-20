@@ -206,6 +206,9 @@ end
   
 def most_points_scored
   game_data=game_hash
-  most_points=0
-  game_hash.each{|
+  most_points=game_data[:home][:players][0]
+  game_hash[:home][:players].each{|player|
+  if most_points[:points]<=player[:points]
+    most_points=player
 end
+}
