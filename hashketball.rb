@@ -223,5 +223,26 @@ end
 
 def winning_team
   game_data=game_hash
-  points_team1=game_data[:home][:team_name]
-  points_team2=
+  team1=0;
+  team2=0;
+  points_team1=game_data[:home][:players]
+  points_team2=game_data[:away][:players]
+  points_team1.each{|player|
+    team1+=player[:points]
+  }
+  points_team2.each{|player|
+    team2+=player[:points]
+  }
+  if team1>team2
+    return game_data[:home][:team_name]
+  else 
+    return game_data[:away][:team_name]
+  end
+  
+  
+  
+  
+  
+  
+  
+  
