@@ -218,5 +218,5 @@ most_points=game_data[:away][:players][0]
     most_points=player
 end
 }
-return player
+return most_points
 end
