@@ -254,7 +254,7 @@ longest_name=game_data[:away][:players][0]
     longest_name=player
 end
 }
-return most_points[:player_name]
+return longest_name[:player_name]
 end
   
   
