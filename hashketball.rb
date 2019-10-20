@@ -238,6 +238,7 @@ def winning_team
   else 
     return game_data[:away][:team_name]
   end
+end
   
   
   
