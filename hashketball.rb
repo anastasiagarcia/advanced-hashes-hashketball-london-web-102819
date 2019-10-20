@@ -242,8 +242,20 @@ end
   
 def player_with_longest_name
   game_data=game_hash
-  
-  
+  longest_name=game_data[:home][:players][0]
+  game_hash[:home][:players].each{|player|
+  if longest_name[:player_name].length <=player[:player_name].length
+    most_points=player
+end
+}
+most_points=game_data[:away][:players][0]
+  game_hash[:away][:players].each{|player|
+  if most_points[:points]<=player[:points]
+    most_points=player
+end
+}
+return most_points[:player_name]
+end
   
   
   
