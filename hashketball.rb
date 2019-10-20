@@ -209,14 +209,14 @@ def most_points_scored
   most_points=game_data[:home][:players][0]
   game_hash[:home][:players].each{|player|
   if most_points[:points]<=player[:points]
-    most_points=player[:player_name]
+    most_points=player
 end
 }
 most_points=game_data[:away][:players][0]
   game_hash[:away][:players].each{|player|
   if most_points[:points]<=player[:points]
-    most_points=player[:player_name]
+    most_points=player
 end
 }
-return most_points
+return most_points[:player_name]
 end
