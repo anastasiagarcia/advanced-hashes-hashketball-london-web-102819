@@ -273,5 +273,4 @@ def long_name_steals_a_ton?
   end
   }
   return stealing_most[:player_name]==longest_name
-  
 end
