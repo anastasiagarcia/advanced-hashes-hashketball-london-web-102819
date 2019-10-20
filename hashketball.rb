@@ -264,6 +264,7 @@ def long_name_steals_a_ton?
   game_data[:home][:players].each{|player|
   if stealing_most[:steals]<=player[:steals]
     stealing_most=player
-  
+  end
+  }
   
   
